@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="row-fluid">
+                <div class="centering text-center">
+                    <h1 class="display-3">Javascript Pomodoro Clock</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="main-heading-text">
+            Choose Your Times
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6">
+                BREAK LENGTH
+                <p>
+                    <span>
+                        <button class="btn btn-primary btn-lg">-</button>
+                    </span class="setBreakTime">5
+                    <span>
+                        <button class="btn btn-primary btn-lg">+</button>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-6">SESSION LENGTH
+                <p>
+                    <span>
+                        <button class="btn btn-primary btn-lg">-</button>
+                    </span class="setPomodoroTime">25
+                    <span>
+                        <button class="btn btn-primary btn-lg">+</button>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div id="circle">
+                    <span id="chosenTime">25:00</span>
+                    <p class="sessionText">SESSION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

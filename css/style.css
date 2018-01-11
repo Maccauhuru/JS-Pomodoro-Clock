@@ -1,0 +1,35 @@
+body div{
+    color: #fff;
+}
+
+.main-heading-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#circle {
+    /* background: rgb(0, 255, 85); */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: rgb(0, 255, 85) solid 1px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#chosenTime {
+    font-size: 3.75rem;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.sessionText {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 25px;
+}
