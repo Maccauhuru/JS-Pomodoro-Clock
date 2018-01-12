@@ -30,20 +30,21 @@
                 BREAK LENGTH
                 <p>
                     <span>
-                        <button class="btn btn-primary btn-lg">-</button>
-                    </span class="setBreakTime">5
+                        <button id="minus-break" class="btn btn-primary btn-lg" onclick="subtractBreakTime()">-</button>
+                    </span><span id="setBreakTime">5</span>
                     <span>
-                        <button class="btn btn-primary btn-lg">+</button>
+                        <button id="plus-break" class="btn btn-primary btn-lg" onclick="addBreakTime()">+</button>
                     </span>
                 </p>
             </div>
             <div class="col-md-6">SESSION LENGTH
                 <p>
                     <span>
-                        <button class="btn btn-primary btn-lg">-</button>
-                    </span class="setPomodoroTime">25
+                        <button id="minus-session" class="btn btn-primary btn-lg" onclick="buttonMinus()">-</button>
+                    </span>
+                    <span id="setPomodoroTime">30</span>
                     <span>
-                        <button class="btn btn-primary btn-lg">+</button>
+                        <button id="plus-session" class="btn btn-primary btn-lg" onclick="buttonPlus()">+</button>
                     </span>
                 </p>
             </div>
@@ -53,9 +54,18 @@
         <div class="row text-center">
             <div class="col-md-12">
                 <div id="circle">
-                    <span id="chosenTime">25:00</span>
+                    <span id="chosenTime">25</span><span>:00</span>
                     <p class="sessionText">SESSION</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <br/>
+                <button id ="startButton" class="btn btn-success btn-lg" onclick="startCounter()">START</button>
+                <button id ="stopButton"  class="btn btn-warning btn-lg">STOP</button>
             </div>
         </div>
     </div>
