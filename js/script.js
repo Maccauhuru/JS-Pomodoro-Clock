@@ -8,6 +8,17 @@ var plusBreak = document.getElementById("plus-break");
 var startButton = document.getElementById("startButton");
 var stopButton = document.getElementById("stopButton");
 
+
+//plays sound when pomodoro is over
+var playAlarm = function() {
+  var audioElement = document.createElement("audio");
+  audioElement.setAttribute(
+    "src",
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/368633/tinsha.mp3"
+  );
+  audioElement.play();
+};
+
 //============================
 //TIME BUTTONS
 //=============================
@@ -27,6 +38,15 @@ function setPomodoro() {
 
 function startCounter() {
   //activates the Pomodoro countdown timer
+  // setInterval(function() {
+  //   setPomodoro();
+  //   if (chosenTime == 0) {
+  //     //done();
+  //     playAlarm();
+  //   } else {
+  //     chosenTime--;
+  //   }
+  // }, 1000);
 }
 
 function stopCounter() {
@@ -41,6 +61,9 @@ function stopCounter() {
 function subtractSessionTime() {
   //subtract time from setPomodoroTime
   var decreaseTime = parseInt(setPomodoroTime.innerHTML);
+  if(decreaseTime <= 0){
+    return false;
+  }
   decreaseTime--;
   console.log(decreaseTime);
   setPomodoroTime.innerHTML = decreaseTime;
@@ -58,6 +81,9 @@ function addSessionTime() {
 
 function subtractBreakTime() {
   var breakTime = parseInt(setBreakTime.innerHTML);
+  if(breakTime <=0){
+    return false;
+  }
   breakTime--;
   console.log(breakTime);
   setBreakTime.innerHTML = breakTime;
@@ -69,4 +95,15 @@ function addBreakTime() {
   console.log(breakTime);
   setBreakTime.innerHTML = breakTime;
 }
+
+//============================
+//COUNTDOWN TIMER FUNCTIONS
+//=============================
+function countDownTimer() {
+ var setTimer = parseInt(chosenTime.innerHTML);
+ console.log(chosenTime.value());
+}
+//setInterval(countDownTimer, 1000);
+
+
 
