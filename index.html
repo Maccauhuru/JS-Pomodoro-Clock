@@ -31,7 +31,8 @@
                 <p>
                     <span>
                         <button id="minus-break" class="btn btn-primary btn-lg" onclick="subtractBreakTime()">-</button>
-                    </span><span id="setBreakTime">5</span>
+                    </span>
+                    <span id="setBreakTime">5</span>
                     <span>
                         <button id="plus-break" class="btn btn-primary btn-lg" onclick="addBreakTime()">+</button>
                     </span>
@@ -42,7 +43,7 @@
                     <span>
                         <button id="minus-session" class="btn btn-primary btn-lg" onclick="buttonMinus()">-</button>
                     </span>
-                    <span id="setPomodoroTime">30</span>
+                    <span id="setPomodoroTime">25</span>
                     <span>
                         <button id="plus-session" class="btn btn-primary btn-lg" onclick="buttonPlus()">+</button>
                     </span>
@@ -54,7 +55,8 @@
         <div class="row text-center">
             <div class="col-md-12">
                 <div id="circle">
-                    <span id="chosenTime">25</span><span>:00</span>
+                    <span id="chosenTime">25</span>
+                    <span id="chosenSeconds">:00</span>
                     <p class="sessionText">SESSION</p>
                 </div>
             </div>
@@ -64,8 +66,9 @@
         <div class="row text-center">
             <div class="col-md-12">
                 <br/>
-                <button id ="startButton" class="btn btn-success btn-lg" onclick="startCounter()">START</button>
-                <button id ="stopButton"  class="btn btn-warning btn-lg">STOP</button>
+                <button id="startButton" class="btn btn-success btn-lg" onclick="startCounter()">START</button>
+                <button id="stopButton" class="btn btn-warning btn-lg" onclick="stopCounter()">STOP</button>
+                <button id="stopButton" class="btn btn-danger btn-lg" onclick="clearSessionTime()">CLEAR</button>
             </div>
         </div>
     </div>

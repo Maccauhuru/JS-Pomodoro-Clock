@@ -1,4 +1,5 @@
 var chosenTime = document.getElementById("chosenTime");
+var chosenSeconds = document.getElementById("chosenSeconds");
 var setPomodoroTime = document.getElementById("setPomodoroTime");
 var setBreakTime = document.getElementById("setBreakTime");
 var minusSession = document.getElementById("minus-session");
@@ -36,21 +37,29 @@ function setPomodoro() {
   chosenTime.innerHTML = setPomodoroTime.innerHTML;
 }
 
+function clearSessionTime() {
+  //clears the time and sets it back to default
+  chosenTime.innerHTML = 25;
+  chosenTime.style.color = "white";
+  setPomodoroTime.innerHTML = 25;
+}
+
 function startCounter() {
   //activates the Pomodoro countdown timer
-  // setInterval(function() {
-  //   setPomodoro();
-  //   if (chosenTime == 0) {
-  //     //done();
-  //     playAlarm();
-  //   } else {
-  //     chosenTime--;
-  //   }
-  // }, 1000);
+sessionValue = Number(chosenTime.innerHTML);
+var interval = setInterval(function() {
+  chosenTime.innerHTML = --sessionValue;
+  if (sessionValue == 0) clearInterval(interval);
+}, 1000);
+
+
 }
 
 function stopCounter() {
   //de-activates the Pomodoro countdown timer
+  chosenTime.innerHTML="STOP";
+  chosenSeconds.innerHTML="";
+  clearInterval(interval);
 }
 
 
